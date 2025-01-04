@@ -1,23 +1,14 @@
 {
   "canisters": {
-    "message_board": {
-      "type": "custom",
+    "message_board":  {
+      "type": "azle",
       "main": "src/index.ts",
-      "candid": "src/index.did",
-      "candid_gen": "http",
-      "build": "npx azle message_board",
-      "wasm": ".azle/message_board/message_board.wasm",
-      "gzip": true,
-      "metadata": [
-        {
-            "name": "candid:service",
-            "path": "src/index.did"
-        },
-        {
-            "name": "cdk:name",
-            "content": "azle"
-        }
-    ]
-    }
+      "custom": {
+          "experimental": true,
+          "candid_gen": "http"
+      }
+
+    
+  }
   }
 }
